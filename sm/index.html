@@ -1,0 +1,582 @@
+<link href="https://fonts.cdnfonts.com/css/chalkduster" rel="stylesheet">
+<style>
+    @import url('https://fonts.cdnfonts.com/css/chalkduster');
+</style>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>SceneScape: Text-Driven Consistent Scene Generation</title>
+<link href="./assets/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<button style="position: fixed;right: 15px;top:  50%;height: 100px;width: 140px; font-size: 20px;" type="button"><a href="#top">Back to top</a></button> 
+<div class="page-container">
+  <h1 align="center">SceneScape: Text-Driven Consistent Scene Generation</h1>
+  <h2 align="center">Supplementary Material</h2>
+	
+  <p align="center">&nbsp;</p>
+	<a href="#top"></a>
+  <ul>
+<!--	<li><a href="assets/paper.pdf">Our Paper</a></li>-->
+<!--	<li><a href="assets/supplementary.pdf">Supplementary Material PDF</a></li>-->
+	<li><a href="#our_results_container">Our Results</a></li>
+	<li><a href="#ablations_container">Ablations</a></li>
+	<li><a href="#comparisons_container">Comparisons</a></li>
+  </ul>
+  <p><br><span class="emph">We recommend watching all videos in full screen. Double-click on the videos for seeing them in full scale.</span></p>
+	
+  <!------------------ BEGIN SECTION ------------------>
+
+  <p>&nbsp;</p>
+  <hr>
+	
+  <h2 id="our_results_container" align="left"><a name="image-results" id="image-results"></a>Our Results</h2>
+
+
+  <p align="left">
+    Sample results from our framework (part of which are shown in Fig.3). 
+  </p>
+
+  <br/>
+
+  
+  <table class="result-table" width="100%" align="center">
+		<tbody>
+                <tr>
+                    <th style="font-family: Chalkduster;">"A dimly lit library, with rows upon rows of leather-bound books and dark
+                        wooden shelves."</th>
+                    <th style="font-family: Chalkduster;">"A grand, marble staircase spirals up to a vaulted ceiling in a grand entrance
+                        hall of a palace"</th>
+                    <th style="font-family: Chalkduster;">"A grand, marble staircase spirals up to a vaulted ceiling in a grand entrance
+                        hall of a palace."</th>
+                </tr>
+                <!-- <tr> <td> <p>&nbsp;</p> </td> </tr> -->
+                <tr>
+                    <td>
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/dimly_lit_library/video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Our result</div>
+                        </div>
+
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/dimly_lit_library/depth.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Fine-tuned depth</div>
+                         </div>
+                    </td>
+                    <td>
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/grand_marble_staircase/video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Our result</div>
+                        </div>
+
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/grand_marble_staircase/depth.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Fine-tuned depth</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/grand_marble_staircase_2/video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Our result</div>
+                        </div>
+
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/grand_marble_staircase_2/depth.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Fine-tuned depth</div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr> <td> <br /> <br /> </td> </tr>
+
+                <tr>
+                    <th style="font-family: Chalkduster">"POV, haunted house, dark, wooden door, spider webs, skeletons"</th>
+                    <th style="font-family: Chalkduster">"inside a castle made of ice, beautiful photo, masterpiece"</th>
+                    <th style="font-family: Chalkduster">"walkthrough, inside a medieval forge, metal, fire, beautiful photo, masterpiece"</th>
+                </tr>
+                <!-- <tr> <td> <p>&nbsp;</p> </td> </tr> -->
+                <tr>
+                    <td>
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/haunted_house/video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Our result</div>
+                        </div>
+
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/haunted_house/depth.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Fine-tuned depth</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/castle_made_of_ice/video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Our result</div>
+                        </div>
+
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/castle_made_of_ice/depth.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Fine-tuned depth</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/medieval_forge/video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Our result</div>
+                        </div>
+
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/medieval_forge/depth.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Fine-tuned depth</div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr> <td> <br /> <br /> </td> </tr>
+
+                <tr>
+                    <th style="font-family: Chalkduster">"indoor scene, interior, candy house, fantasy, beautiful, masterpiece, best quality"</th>
+                    <th style="font-family: Chalkduster">"Simple museum, pictures, paintings, artistic, best quality, dimly lit"</th>
+                    <th style="font-family: Chalkduster">"POV, cave, pools, water, dark cavern, inside a cave, beautiful scenery, best quality"</th>
+                </tr>
+                <!-- <tr> <td> <p>&nbsp;</p> </td> </tr> -->
+                <tr>
+                    <td>
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/candy_house/video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Our result</div>
+                        </div>
+
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/candy_house/depth.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Fine-tuned depth</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/simple_museum/video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Our result</div>
+                        </div>
+
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/simple_museum/depth.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Fine-tuned depth</div>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/cave_pools/video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Our result</div>
+                        </div>
+
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/cave_pools/depth.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Fine-tuned depth</div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr> <td> <br /> <br /> </td> </tr>
+
+                <tr>
+                    <th style="font-family: Chalkduster">"POV, cave, pools, water, dark cavern, inside a cave, beautiful scenery, best quality"</th>
+                    <th style="font-family: Chalkduster">"walkthrough, sci-fi ship interiors, corridors,amazing quality, masterpiece,
+                        beautiful scenery, best quality"</th>
+                    <th style="font-family: Chalkduster">"indoor scene, interior, candy house, fantasy, beautiful, masterpiece, best quality"</th>
+                </tr>
+                <!-- <tr> <td> <p>&nbsp;</p> </td> </tr> -->
+                <tr>
+                    <td>
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/cave_pools_2/video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Our result</div>
+                        </div>
+
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/cave_pools_2/depth.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Fine-tuned depth</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/scifi-ship/video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Our result</div>
+                        </div>
+
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/scifi-ship/depth.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Fine-tuned depth</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/candy_house_2/video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Our result</div>
+                        </div>
+
+                        <div class="video-container">
+                            <video autoplay controls loop muted class="result-video">
+                                <source src="assets/videos/candy_house_2/depth.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-label">Fine-tuned depth</div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr> <td> <br /> <br /> </td> </tr>
+
+                
+
+		</tbody>
+	</table>
+    <!------------------ END SECTION ------------------>
+
+
+
+
+  <!------------------ BEGIN SECTION ------------------>
+  <p>&nbsp;</p>
+  <hr>
+	
+  <h2 id="ablations_container" align="left"><a name="image-results" id="image-results"></a>Ablations</h2>
+  <p align="left">We ablate the key components in our framework: (i) depth finetuning, (ii) our decoder finetuning. For more discussion and numerical evaluations, please see Sec. 4.1 of our paper.
+
+  <br />
+
+  <table  width="100%" align="center">
+    <tbody>
+            <tr>
+                <th style="font-family: Chalkduster">"POV, cave, pools, water, dark cavern, inside a cave, beautiful scenery, best quality"</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="video-container-ablation">
+                        <video autoplay controls loop muted class="ablation-video">
+                            <source src="assets/ablations/cave_pools_2/video.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-label">Our result</div>
+                    </div>
+
+                    <div class="video-container-ablation">
+                        <video autoplay controls loop muted class="ablation-video">
+                            <source src="assets/ablations/cave_pools_2/wo-depth.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-label">w/o depth fine-tuning</div>
+                     </div>
+
+                     <div class="video-container-ablation">
+                        <video autoplay controls loop muted class="ablation-video">
+                            <source src="assets/ablations/cave_pools_2/wo-decoder.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-label">w/o decoder fine-tuning</div>
+                     </div>
+                </td>
+            </tr>
+
+            <tr> <td> <br /> <br /> </td> </tr>
+
+
+            <tr>
+                <th style="font-family: Chalkduster">"A dimly lit library, with rows upon rows of leather-bound books and dark
+                    wooden shelves."</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="video-container-ablation">
+                        <video autoplay controls loop muted class="ablation-video">
+                            <source src="assets/ablations/dimly_lit_library_2/video.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-label">Our result</div>
+                    </div>
+
+                    <div class="video-container-ablation">
+                        <video autoplay controls loop muted class="ablation-video">
+                            <source src="assets/ablations/dimly_lit_library_2/wo-depth.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-label">w/o depth fine-tuning</div>
+                     </div>
+
+                     <div class="video-container-ablation">
+                        <video autoplay controls loop muted class="ablation-video">
+                            <source src="assets/ablations/dimly_lit_library_2/wo-decoder.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-label">w/o decoder fine-tuning</div>
+                     </div>
+                </td>
+            </tr>
+
+            <tr> <td> <br /> <br /> </td> </tr>
+
+
+            <tr>
+                <th style="font-family: Chalkduster">"indoor scene, interior, candy house, fantasy, beautiful, masterpiece, best quality"</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="video-container-ablation">
+                        <video autoplay controls loop muted class="ablation-video">
+                            <source src="assets/ablations/candy_house_2/video.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-label">Our result</div>
+                    </div>
+
+                    <div class="video-container-ablation">
+                        <video autoplay controls loop muted class="ablation-video">
+                            <source src="assets/ablations/candy_house_2/wo-depth.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-label">w/o depth fine-tuning</div>
+                     </div>
+
+                     <div class="video-container-ablation">
+                        <video autoplay controls loop muted class="ablation-video">
+                            <source src="assets/ablations/candy_house_2/wo-decoder.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-label">w/o decoder fine-tuning</div>
+                     </div>
+                </td>
+            </tr>
+
+            <tr> <td> <br /> <br /> </td> </tr>
+
+
+            <tr>
+                <th style="font-family: Chalkduster">"walkthrough, sci-fi ship interiors, corridors,amazing quality, masterpiece,
+                    beautiful scenery, best quality"</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="video-container-ablation">
+                        <video autoplay controls loop muted class="ablation-video">
+                            <source src="assets/ablations/scifi-ship/video.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-label">Our result</div>
+                    </div>
+
+                    <div class="video-container-ablation">
+                        <video autoplay controls loop muted class="ablation-video">
+                            <source src="assets/ablations/scifi-ship/wo-depth.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-label">w/o depth fine-tuning</div>
+                     </div>
+
+                     <div class="video-container-ablation">
+                        <video autoplay controls loop muted class="ablation-video">
+                            <source src="assets/ablations/scifi-ship/wo-decoder.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-label">w/o decoder fine-tuning</div>
+                     </div>
+                </td>
+            </tr>
+
+            <tr> <td> <br /> <br /> </td> </tr>
+
+
+
+            <tr> <td> <br /> <br /> </td> </tr>
+        </tbody>
+    </table>
+
+<!------------------ END SECTION ------------------>
+
+<!------------------ BEGIN SECTION ------------------>
+<p>&nbsp;</p>
+<hr>
+  
+<h2 id="comparisons_container" align="left"><a name="image-results" id="image-results"></a>Comparisons</h2>
+<p align="left"> We compare our method to two additional baselines: </p>
+<ul>
+    <li>
+        <i>Only-zoom</i>. Following the online AI community, we assume the constant-depth scene, and remove the depth prediction model from the method.
+    </li>
+    <li>
+        <i>2D Splatting</i>.  We replace our unified 3D representation with 2D rendering, i.e., warping the content from the current frame to the next, using a depth-aware splatting warping <a href="#id-1">[1]</a>
+    </li>
+</ul>
+<br />
+
+<table  width="100%" align="center">
+  <tbody>
+          <tr>
+              <th style="font-family: Chalkduster">"POV, cave, pools, water, dark cavern, inside a cave, beautiful scenery, best quality"</th>
+          </tr>
+          <tr>
+              <td>
+                  <div class="video-container-ablation">
+                      <video autoplay controls loop muted class="ablation-video">
+                          <source src="assets/comparisons/cave/video.mp4" type="video/mp4">
+                      </video>
+                      <div class="video-label">Our result</div>
+                  </div>
+
+                  <div class="video-container-ablation">
+                      <video autoplay controls loop muted class="ablation-video">
+                          <source src="assets/comparisons/cave/zoom.mp4" type="video/mp4">
+                      </video>
+                      <div class="video-label">"Only-zoom"</div>
+                   </div>
+
+                   <div class="video-container-ablation">
+                      <video autoplay controls loop muted class="ablation-video">
+                          <source src="assets/comparisons/cave/splatting.mp4" type="video/mp4">
+                      </video>
+                      <div class="video-label">Splatting</div>
+                   </div>
+              </td>
+          </tr>
+
+          <tr> <td> <br /> <br /> </td> </tr>
+
+          <tr>
+              <th style="font-family: Chalkduster">"indoor scene, interior, candy house, fantasy, beautiful, masterpiece, best quality"</th>
+          </tr>
+          <tr>
+              <td>
+                  <div class="video-container-ablation">
+                      <video autoplay controls loop muted class="ablation-video">
+                          <source src="assets/comparisons/candy_house_2/video.mp4" type="video/mp4">
+                      </video>
+                      <div class="video-label">Our result</div>
+                  </div>
+
+                  <div class="video-container-ablation">
+                      <video autoplay controls loop muted class="ablation-video">
+                          <source src="assets/comparisons/candy_house_2/zoom.mp4" type="video/mp4">
+                      </video>
+                      <div class="video-label">"Only-zoom"</div>
+                   </div>
+
+                   <div class="video-container-ablation">
+                      <video autoplay controls loop muted class="ablation-video">
+                          <source src="assets/comparisons/candy_house_2/splatting.mp4" type="video/mp4">
+                      </video>
+                      <div class="video-label">Splatting</div>
+                   </div>
+              </td>
+          </tr>
+
+          <tr> <td> <br />  </td> </tr>
+        </tbody>
+</table>
+<hr style="border: 1px dashed black;">
+<p align="left"> We compare our method to Splatting baseline with horizontal camera translations. This demonstrates the need of a unified 3D representation: </p>
+<table  width="100%" align="center">
+    <tbody>
+          <tr> <td> <br />  </td> </tr>
+          <tr>
+            <th style="font-family: Chalkduster">"POV, beautiful room, wardrobe, bed, table, side view"</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="video-container-ablation">
+                    <video autoplay controls loop muted class="ablation-video">
+                        <source src="assets/comparisons/bedroom/ours.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-label">Our result</div>
+                </div>
+
+                <div class="video-container-ablation">
+                    <video autoplay controls loop muted class="ablation-video">
+                        <source src="assets/comparisons/bedroom/splatting.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-label">"Splatting"</div>
+                 </div>
+            </td>
+        </tr>
+
+          <tr> <td> <br /> <br /> </td> </tr>
+
+          <tr>
+            <th style="font-family: Chalkduster">"a wall in a museum with paintings, beautiful photo, masterpiece"</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="video-container-ablation">
+                    <video autoplay controls loop muted class="ablation-video">
+                        <source src="assets/comparisons/pictures_wall/ours.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-label">Our result</div>
+                </div>
+
+                <div class="video-container-ablation">
+                    <video autoplay controls loop muted class="ablation-video">
+                        <source src="assets/comparisons/pictures_wall/splatting.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-label">"Splatting"</div>
+                 </div>
+            </td>
+        </tr>
+
+          <tr> <td> <br /> <br /> </td> </tr>
+
+
+          <tr> <td> <br /> <br /> </td> </tr>
+      </tbody>
+  </table>
+
+<!------------------ END SECTION ------------------>
+
+
+	
+  <p><br>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+
+  <p>
+    <a name="id-1" id="id-1"></a>
+    [1] Simon Niklaus and Feng Liu. 2020. Softmax splatting for video frame interpolation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 5437–5446.
+  </p>
+
+</div>
+
+</body></html>
