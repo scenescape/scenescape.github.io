@@ -156,18 +156,24 @@ code {
 
 /*move 150 pixels right*/
 .carousel-control-prev {
- margin-left: 240px;
- height: 512px;
+ margin-left: 300px;
+ height: 380px;
  }
  .carousel-control-next {
- margin-right: 240px;
- height: 512px;
+ margin-right: 300px;
+ height: 380px;
  }
  .carousel-item {
-	 height: 585px;
+	 height: 460px;
 	 overflow: visible;
 	 /* width: 100%; */
 	 text-align: center;
+ }
+ .img-fluid{
+     height: 400px;
+    width: 400px;
+    /* height: 80%;*/
+    /*    width: 80%;*/
  }
  .carousel-item img {
  /* width: 100%; */
