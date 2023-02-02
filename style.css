@@ -156,11 +156,13 @@ code {
 
 /*move 150 pixels right*/
 .carousel-control-prev {
- margin-left: 300px;
+position: absolute;
+ margin-left: 80px;
  height: 380px;
  }
  .carousel-control-next {
- margin-right: 300px;
+ position: absolute;
+ margin-right: 80px;
  height: 380px;
  }
  .carousel-item {
