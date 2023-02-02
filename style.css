@@ -256,5 +256,6 @@ position: absolute;
 
 .prompt{
 	 width: 612px;
-	font-size: 20px;
+	 font-size: 20px;
+	 font-family: Chalkduster;
 }
