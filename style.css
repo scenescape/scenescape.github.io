@@ -245,6 +245,8 @@ position: absolute;
 
  #videoCarousel{
      margin-top:5px;
+     width: 650px;
+     margin: auto;
  }
 
 
