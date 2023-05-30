@@ -26,9 +26,23 @@ td {
     display: inline-block;
 }
 
+.video-container-results {
+    height: 512px;
+    width: 512px;
+    margin: 3px;
+    display: inline-block;
+}
+
 .video-container-ablation {
     height: 250px;
     width: 250px;
+    margin: 3px;
+    display: inline-block;
+}
+
+.video-container-meshes {
+    height: 360px;
+    width: auto;
     margin: 3px;
     display: inline-block;
 }
@@ -39,13 +53,27 @@ td {
 }
 
 .result-video {
-    height: 225px;
-    width: 225px;
+    height: 512px;
+    width: 512px;
+}
+.results_prompt{
+    margin: auto;
+    width: 90%;
 }
 
 .ablation-video {
     height: 250px;
     width: 250px;
+}
+
+.comparison-video {
+    height: 225px;
+    width: 225px;
+}
+
+.mesh-video {
+    height: 360px;
+    width: auto;
 }
 
 .page-container {

@@ -2,13 +2,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
-@font-face{
-	font-family:Chalkduster;
-	font-style:normal;
-	font-weight:400;
-	src: url(./fonts/Chalkduster.woff) format('woff')
-}
-
 
 body {
 	font-family: Google Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -163,12 +156,10 @@ code {
 
 /*move 150 pixels right*/
 .carousel-control-prev {
-position: absolute;
  margin-left: 80px;
  height: 380px;
  }
  .carousel-control-next {
- position: absolute;
  margin-right: 80px;
  height: 380px;
  }
@@ -252,8 +243,6 @@ position: absolute;
 
  #videoCarousel{
      margin-top:5px;
-     width: 650px;
-     margin: auto;
  }
 
 
@@ -263,6 +252,12 @@ position: absolute;
 
 .prompt{
 	 width: 612px;
-	 font-size: 20px;
-	 font-family: Chalkduster;
+	font-size: 20px;
+}
+
+.video-container-meshes {
+    height: 100%;
+    width: 100%;
+    margin: 3px;
+    display: inline-block;
 }
