@@ -14,6 +14,19 @@
       <style>
 
       </style>
+
+      <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+      <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.152.2/examples/jsm/"
+          }
+        }
+      </script>
+      <script type="module" src="./mesh_viewers.js"></script>
+
    </head>
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -317,21 +330,7 @@
 
           <hr>
           <p> A visualization of the resulting meshes, produced by our method and post processed with Poisson surface reconstruction. </p>
-<!--            <video controls autoplay loop muted style="padding: 0; display: block; margin: 0 auto; height: 30%; width: auto">-->
-<!--                <source src="sm/assets/meshes/cave.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            <p class="prompt" style="font-family: Chalkduster,serif; margin: auto; width:50%; text-align: center">-->
-<!--                POV, cave, pools, water, dark cavern, inside a cave, beautiful scenery, best quality-->
-<!--            </p>-->
-<!--            <br />-->
-
-<!--            <video controls autoplay loop muted style="padding: 0; display: block; margin: 0 auto; height: 30%; width: auto">-->
-<!--                <source src="sm/assets/meshes/candy_house.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            <p class="prompt" style="font-family: Chalkduster,serif; margin: auto; width:50%; text-align: center">-->
-<!--                indoor scene, interior, candy house, fantasy, beautiful, masterpiece, best quality-->
-<!--            </p>-->
-          <table style="table-layout: fixed ;width: 100%">
+          <table style="table-layout: fixed; width: 100%">
             <tbody>
                   <tr> <td> <br />  </td> </tr>
                   <tr>
@@ -340,14 +339,31 @@
                 </tr>
                 <tr>
                     <td>
-                            <video  controls autoplay loop muted style="padding: 2px; display: block; margin: 0 auto; height: auto; width: 100%">
-                                <source src="sm/assets/meshes/cave.mp4" type="video/mp4">
-                            </video>
+                        <div style="text-align: center;"><button id="cave-loader">Load Mesh</button></div>
+                        <div hidden class="progressBar">
+                            <div id="cave-bar" class="bar" style="width: 0%;">0%</div>
+                        </div>
+                        <button hidden id="cave-fullscreen" class="fullscreen-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <canvas hidden class="mesh-viewer" id="cave-canvas" data-engine="three.js r152">
+                        </canvas>
                     </td>
                     <td>
-                            <video  controls autoplay loop muted style="padding: 2px; display: block; margin: 0 auto; height: auto; width: 100%">
-                                <source src="sm/assets/meshes/candy_house.mp4" type="video/mp4">
-                            </video>
+                        <div style="text-align: center;"><button id="candyhouse-loader">Load Mesh</button></div>
+                        <div hidden class="progressBar">
+                            <div id="candyhouse-bar" class="bar" style="width: 0%;">0%</div>
+                        </div>
+                        <button hidden id="candyhouse-fullscreen" class="fullscreen-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <canvas hidden class="mesh-viewer" id="candyhouse-canvas" data-engine="three.js r152"></canvas>
                     </td>
                 </tr>
               </tbody>
